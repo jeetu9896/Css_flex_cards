@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flex Cards</title>
+</head>
+<style>
+    #container {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    h1 {
+        width: 50%;
+        align-self: center;
+        color: goldenrod;
+        font-size: 60px;
+        font-family: "Playfair Display", times, serif;
+        font-weight: 700;
+    }
+
+    h1+p {
+        width: 50%;
+        align-self: center;
+        font-family: "Roboto", arial, sans-serif;
+        font-weight: 200;
+        font-size: 16px;
+        line-height: 1.8;
+        color: #6c757d;
+        position: relativ
+    }
+
+    #imgcontainer {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        flex-flow: row wrap;
+    }
+
+    #imgcontainer>div {
+        width: 25%;
+
+        margin: 10px;
+    }
+
+    #imgcontainer>div img {
+        width: 100%;
+    }
+
+    h2+P {
+        font-family: "Roboto", arial, sans-serif;
+        font-weight: 200;
+        font-size: 16px;
+        line-height: 1.8;
+        color: goldenrod;
+    }
+
+    @media (max-width:600px) and (min-width:320px) {
+        #imgcontainer {
+            width: 100%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-flow: column wrap;
+        }
+
+        #imgcontainer>div {
+            width: 100%;
+
+            margin: 10px;
+        }
+
+        #imgcontainer>div img {
+            width: 50%;
+        }
+    }
+
+    @media (max-width:750px) and (min-width:601px) {
+        #imgcontainer {
+            width: 100%;
+            /* text-align: center; */
+            display: flex;
+           /* ? justify-content: space-around; */
+           flex-shrink: left ;
+           flex-wrap: wrap;
+           /* ? flex-flow:row-reverse wrap-reverse ; */
+        }
+
+        #imgcontainer>div {
+            width: 40%;
+
+            margin: 10px;
+        }
+
+        #imgcontainer>div img {
+            width: 100%;
+        }
+    }
+</style>
+
+<body>
+    <div id="container">
+        <h1> Rooms & Suites</h1>
+        <p>
+            Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
+            blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language
+            ocean.
+        </p>
+        <div id="imgcontainer">
+            <div>
+                <img src="https://preview.colorlib.com/theme/sogo/images/ximg_1.jpg.pagespeed.ic.sI14MfHd8f.webp"
+                    alt="Bed romms">
+                <h2>Single Room</h2>
+                <p>90$ / PER NIGHT</p>
+            </div>
+            <div>
+                <img src="https://preview.colorlib.com/theme/sogo/images/ximg_2.jpg.pagespeed.ic.Y_xvNxfEhu.webp"
+                    alt="Bed romms">
+                <h2>Family Room</h2>
+                <p>120$ / PER NIGHT</p>
+            </div>
+            <div>
+                <img src="https://preview.colorlib.com/theme/sogo/images/ximg_3.jpg.pagespeed.ic.mYPnC0rXDl.webp"
+                    alt="Bed romms">
+                <h2>Presidential Room</h2>
+                <p>250$ / PER NIGHT</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
